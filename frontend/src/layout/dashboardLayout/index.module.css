@@ -1,0 +1,91 @@
+.homeContainer{
+    display: flex;
+    
+}
+.homeContainer >div:nth-child(odd){
+   flex: 0.2;
+}
+.homeContainer >div:nth-child(even){
+    flex:0.6;
+}
+.homeContainer_Leftbar{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: flex-start;
+    border-right: 1px solid rgb(222,222,222);
+
+}
+.sidebarOptions{
+display: flex;
+align-items: center;
+font-size: 1.2rem;
+gap: 1.3rem;
+width: 80%;
+max-width: 80%;
+margin: 0 auto;
+cursor: pointer;
+transition: all 0.8ms;
+border-radius: 5px;
+
+box-shadow: 5px 5px 5px 5px rgb(245, 198, 227);  
+background-color: white;
+}
+.sidebarOptions:hover{
+    transform: scale(1.04);
+}
+.sidebarOptions>svg{
+    height: 1.4em;
+    min-width: fit-content;
+}
+.extraContainer{
+    border-left: 1px solid rgb(222,222,222);
+    padding: 1.2rem;
+
+}
+.feedContainer{
+    padding-inline: 0.8rem;
+    padding-bottom: 8vh;
+}
+.mobileNavbar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 6vh;
+    width: 100vw;
+    background: white;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+.mobileNavbar svg{
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px){
+    .extraContainer{
+        display: none;
+    }
+    .homeContainer{
+        display: block;
+    }
+    .homeContainer_Leftbar{
+        display: none;
+    }
+    .sidebarOptions .para{
+        font-size: 0.1rem;
+    }
+    .homeContainer > div:nth-child(even),
+  .homeContainer > div:nth-child(odd) {
+    flex: 1; /* Make the main content take up all available space */
+  }
+    .mobileNavbar{
+        display: flex;
+    }
+   
+
+}

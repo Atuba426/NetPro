@@ -1,0 +1,98 @@
+.container{
+    font-family: "poppins";
+    padding: 1.2rem;
+   
+}
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding-inline: 2rem;
+    height: 80vh;
+}
+.maincontainer_left{
+    flex: 0.5;
+}
+.maincontainer_right{
+    flex: 0.5;
+  
+}
+.maincontainer_right img{
+   height: 350px;
+   width: 370px;
+   border-radius: 10px;
+}
+.maincontainer_left >p:nth-child(1){
+    font-size: 2.9rem;
+}
+.maincontainer_left >p:nth-child(2){
+    font-size: 1.7rem;
+    color: #4D4D4D;
+}
+.maincontainer_left > div.joinButton{
+    width: fit-content;
+    cursor:pointer ;
+   margin-top: 0.8rem;
+   font-size: 1.4rem;
+   transition: all 0.2s;
+   user-select: none ;
+   background-color: rgb(197,44,208);
+   color: white;
+   padding-inline: 1.2rem;
+   padding-block: 0.6rem;
+   border-radius: 20px;
+}
+@keyframes fadeSlideLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeSlideRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+.maincontainer_left {
+    animation: fadeSlideLeft 2s ease-out forwards;
+  }
+  
+  .maincontainer_right img {
+    animation: fadeSlideRight 2s ease-out forwards;
+  }
+@media only screen and (max-width:600px){
+  .mainContainer{
+    flex-direction: column;
+    gap: 2rem ;
+    padding-top: 1.3rem;
+  }
+  .maincontainer_left{
+    flex: 1;
+    padding-top: 1.5rem;
+  }
+  .maincontainer_right{
+    flex: 1;
+  }
+  .maincontainer_right img{
+    width: 100%;
+    height: auto;
+  }
+  .maincontainer_left >p:nth-child(1) {
+    font-size: 2rem; 
+}
+.maincontainer_left >p:nth-child(2) {
+  font-size: 1.2rem;
+}
+}
+

@@ -1,0 +1,122 @@
+### Register User
+POST http://localhost:9090/register
+Content-Type: application/json
+
+{
+  "name": "Ayesha",
+  "email": "atuba222@gmail.com",
+  "password": "123456",
+  "username": "agnipariksha"
+}
+###
+POST http://localhost:9090/login
+Content-Type: application/json
+
+{
+ 
+  "email": "ayesha@gmail.com",
+  "password": "2406"
+}
+###
+GET http://localhost:9090/get_user_and_profile
+Content-Type: application/json
+
+{
+  "token":"ed1c4a12fae85810f7a95644b27dbeb0c511ec9c191ba135bbc3a29f1b0b5735"
+}
+###
+POST http://localhost:9090/update_profile_data
+Content-Type: application/json
+
+{
+  "token":"fc0791f505626fefdbe414636dc2083f782fd76f6f71dd05e878bd3c7137c320",
+  "bio":"Aspiring Software engineer",
+  "currentPost": "Mern Stack Developer",
+  "pastWork": [
+    {
+      "company": "Microsoft",
+      "position": "Mern Stack Developer",
+      "years": "1"
+    }
+  ],
+  "education": [
+    {
+      "school": "Madni High School",
+      "degree": "BCA",
+      "typeOfStudy": "2025-2027"
+    }
+  ]
+}
+###
+POST http://localhost:9090/register
+Content-Type: application/json
+
+{
+  "name": "Afifa",
+  "email": "afifa@gmail.com",
+  "password": "asdf",
+  "username": "ImCa"
+}
+###
+POST http://localhost:9090/login
+Content-Type: application/json
+
+{
+ 
+  "email": "afifa@gmail.com",
+  "password": "asdf"
+}
+###
+GET http://localhost:9090/get_user_and_profile
+Content-Type: application/json
+
+{
+  "token":"b6ea82ab4877c42028178bcd90f7dca23f5a75e1161f432edc714bf4d2faa73b"
+}
+###
+POST http://localhost:9090/update_profile_data
+Content-Type: application/json
+
+{
+  "token":"b6ea82ab4877c42028178bcd90f7dca23f5a75e1161f432edc714bf4d2faa73b",
+  "bio":"CEO",
+  "currentPost": "CEO",
+  "pastWork": [
+    {
+      "company": "Google",
+      "position": "software Engineer",
+      "years": "2"
+    }
+  ],
+  "education": [
+    {
+      "school": "IIT",
+      "degree": "M.Tech",
+      "typeOfStudy": "2015-2019"
+    }
+  ]
+}
+###
+GET http://localhost:9090/user/get_all_users
+Content-Type: application/json
+###
+GET  http://localhost:9090/get_all_posts
+
+Content-Type: application/json
+###
+delete  http://localhost:9090/delete_post
+
+Content-Type: application/json
+###
+delete  http://localhost:9090/delete_comment
+
+Content-Type: application/json
+{
+  "token"
+: 
+"7c302706d6e07c4cdcb87b007c0266eb3ed0c768ec102eed6800a9e353333cb3",
+  "comment_id"
+: 
+"687cdffb12be32a56692b9ea",
+
+}

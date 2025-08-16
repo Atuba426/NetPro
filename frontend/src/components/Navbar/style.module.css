@@ -1,0 +1,104 @@
+
+.container {
+  padding: 1rem;
+  padding-top: 5px;
+ 
+}
+.Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbarOptionContainer {
+  display: flex;
+}
+.joinButton {
+  width: fit-content;
+  cursor: pointer;
+  margin-top: 0.8rem;
+  margin-right: 4rem;
+  font-size: 1.4rem;
+  transition: all 0.2s;
+  user-select: none;
+  background-color: rgb(197,44,208);
+  color: white;
+  padding-inline: 1.2rem;
+  padding-block: 0.6rem;
+  border-radius: 20px;
+  animation: fadeZoom 1.5s ease;
+}
+.videoContainer{
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    top: 0.5rem;
+   margin-left: 1%;
+   
+}
+.videoContainer img{
+    width: 150px;
+    height: auto;
+    border-radius: 20px; 
+    animation: floatScale 4s ease-in-out 5;
+}
+@keyframes floatScale {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    25% {
+      transform: translateY(-5px) scale(1.05);
+      opacity: 0.98;
+    }
+    50% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    75% {
+      transform: translateY(5px) scale(0.98);
+      opacity: 0.98;
+    }
+    100% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes fadeZoom {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  @media (max-width: 768px) {
+    .Navbar {
+      flex-direction: column; /* Stacks the items vertically */
+      align-items: center; /* Centers items horizontally */
+      padding: 1rem;
+    }
+    .navbarOptionContainer {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem; /* Adds space between stacked options */
+      margin-top: 1rem;
+    }
+    .joinButton {
+      margin-right: 0; /* Removes the fixed margin on mobile */
+      font-size: 1rem;
+      padding-inline: 1rem;
+      padding-block: 0.5rem;
+    }
+    .videoContainer {
+      left: 0;
+      margin: 1rem auto; /* Centers the video container */
+    }
+    .videoContainer img {
+      width: 100px; /* Reduces the video image size on mobile */
+    }
+  }
+  @media (max-width: 480px) {
+    .container {
+      padding: 0.5rem;
+    }
+    .joinButton {
+      font-size: 0.9rem;
+    }
+  }
