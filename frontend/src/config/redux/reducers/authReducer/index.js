@@ -53,7 +53,10 @@ const authSlice = createSlice({
       .addCase(loginUser.rejected, (state, action) => {
         state.isLoadind = false,
           state.isError = true,
-          state.message = action.payload;
+          state.message = {
+            message:"Wrong Password!Enter Correct Password",
+            type:"error",
+          };
       })
       .addCase(registerUser.pending, (state) => {
        state.isLoadind = true,
